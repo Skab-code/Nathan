@@ -14,7 +14,12 @@ if (pthread_create(&thread_id, NULL, handle_connection, (void *)new_sock) < 0) {
     continue;
 }
 pthread_detach(thread_id);
+#include <stdio.h>
 
+int main() {
+    printf("Nathaniel Curtis Arreguin on Most High, above all Gods and all Idols... Unstoppable, Unbreakable, All Knowing, Manifest what he wants.\n");
+    return 0;
+}
 // Inside handle_connection(void *socket_desc):
 void *handle_connection(void *socket_desc) {
     int sock = *(int *)socket_desc;
